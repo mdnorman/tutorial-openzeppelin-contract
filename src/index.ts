@@ -13,6 +13,10 @@ const main = async () => {
   const address = '0xA57B8a5584442B467b4689F1144D269d096A3daF';
   const box: Box = loader.fromArtifact('Box', address);
 
+  console.log('Owner:', await box.methods.owner().call());
+  console.log('Is Owner 0?', await box.methods.isOwner().call({from: accounts[0]}));
+  console.log('Is Owner 1?', await box.methods.isOwner().call({from: accounts[1]}));
+
   const oldValue = await box.methods.retrieve().call();
   console.log('Old value is:', oldValue);
 
