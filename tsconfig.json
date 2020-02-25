@@ -13,7 +13,8 @@
     "noImplicitThis": true,
     "strictNullChecks": true,
     "forceConsistentCasingInFileNames": true,
-    "outDir": "dist"
+    "outDir": "dist",
+    "allowSyntheticDefaultImports": true
   },
   "include": ["./src/**/*.ts"],
   "files": ["./node_modules/@types/node/index.d.ts"],
