@@ -1,6 +1,6 @@
 {
   "author": "Michael D. Norman",
-  "name": "CHANGEME",
+  "name": "tutorial-OpenZeppelin-contract",
   "description": "",
   "private": true,
   "license": "commercial",
@@ -21,13 +21,19 @@
     "test": "jest",
     "posttest": "npm run lint",
     "lint": "tslint -c tslint.json --project tsconfig.json && tslint -c tslint.json --project spec/tsconfig.json",
-    "pretty": "pretty-quick --stage"
+    "pretty": "pretty-quick --stage",
+    "network:development": "ganache-cli --deterministic"
   },
-  "dependencies": {},
+  "dependencies": {
+    "@openzeppelin/contracts-ethereum-package": "2.4.0"
+  },
   "devDependencies": {
+    "@openzeppelin/cli": "2.7.1",
     "@types/node": "13.7.4",
+    "ganache-cli": "6.9.1",
     "jest": "25.1.0",
     "prettier": "1.19.1",
+    "prettier-plugin-solidity": "1.0.0-alpha.41",
     "pretty-quick": "2.0.1",
     "ts-node": "8.6.2",
     "tslint": "5.20.1",

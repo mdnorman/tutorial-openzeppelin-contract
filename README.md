@@ -1,4 +1,4 @@
-# CHANGEME
+# Tutorial OpenZeppelin Contract
 
 ## Setup
 
@@ -66,6 +66,14 @@ npm run test:integration
 
 ```
 npm run build
+```
+
+## Contracts
+
+### Build and deploy
+
+```shell script
+npx oz create
 ```
 
 [editorconfig]: https://editorconfig.org/
