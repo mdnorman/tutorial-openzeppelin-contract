@@ -708,6 +708,12 @@
     "evmVersion": "petersburg"
   },
   "networks": {
+    "4": {
+      "links": {},
+      "events": {},
+      "address": "0xCDa0E5Ba9c4385167e38EB7489cfa5D7932DC723",
+      "updated_at": 1582690471785
+    },
     "1582512986543": {
       "links": {},
       "events": {},
@@ -731,6 +737,12 @@
       "events": {},
       "address": "0xA57B8a5584442B467b4689F1144D269d096A3daF",
       "updated_at": 1582685205769
+    },
+    "1582688962714": {
+      "links": {},
+      "events": {},
+      "address": "0xA57B8a5584442B467b4689F1144D269d096A3daF",
+      "updated_at": 1582688983975
     }
   }
 }

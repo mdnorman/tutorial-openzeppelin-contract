@@ -156,3 +156,5 @@ node_modules
 
 .openzeppelin/.session
 /.openzeppelin/dev-*.json
+/.openzeppelin/rinkeby.json
+secrets.json
