@@ -21,13 +21,19 @@ const main = async () => {
   const oldValue = await box.methods.retrieve().call();
   console.log('Old value is:', oldValue);
 
-  const newValue = Number(oldValue) + 1;
+  const newValue = Number(oldValue) + 10;
 
   console.log('Storing:', newValue);
   await box.methods.store(newValue).send({from: owner, gas: 50000, gasPrice: 1e6});
 
   const value = await box.methods.retrieve().call();
   console.log('New value is:', value);
+
+  console.log('Incrementing...');
+  await box.methods.increment().send({from: owner, gas: 50000, gasPrice: 1e6});
+
+  const value2 = await box.methods.retrieve().call();
+  console.log('New value is:', value2);
 };
 
 main();

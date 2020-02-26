@@ -16,6 +16,10 @@ contract Box is Ownable {
     emit ValueChanged(newValue);
   }
 
+  function increment() public onlyOwner {
+    store(value + 1);
+  }
+
   function retrieve() public view returns (uint256) {
     return value;
   }

@@ -81,13 +81,11 @@ describe('Box', () => {
   });
 
   describe('store', () => {
-    const bigValue = new BN('12345');
-
     it('should store the value when called by owner', async () => {
       const box = await Box.new();
       await box.initialize(owner);
 
-      await box.store(bigValue, {from: owner});
+      await box.store(12345, {from: owner});
 
       const retrieved = await box.retrieve();
 
@@ -113,6 +111,47 @@ describe('Box', () => {
 
       const receipt = await box.store(12345, {from: owner});
 
+      const bigValue = new BN('12345');
+      expectEvent(receipt, 'ValueChanged', {newValue: bigValue});
+    });
+  });
+
+  describe('increment', () => {
+    it('should increment the value when called by owner', async () => {
+      const box = await Box.new();
+      await box.initialize(owner);
+
+      await box.store(12345, {from: owner});
+
+      await box.increment({from: owner});
+
+      const retrieved = await box.retrieve();
+
+      expect<string>(retrieved.toString()).toEqual('12346');
+    });
+
+    it('should fail to increment the value when called by someone other than the owner', async () => {
+      const box = await Box.new();
+      await box.initialize(owner);
+
+      await expectRevert(box.increment({from: other1}), 'Ownable: caller is not the owner');
+      await expectRevert(box.increment({from: other2}), 'Ownable: caller is not the owner');
+      await expectRevert(box.increment(), 'Ownable: caller is not the owner');
+
+      const retrieved = await box.retrieve();
+
+      expect<string>(retrieved.toString()).toEqual('0');
+    });
+
+    it('should emit ValueChanged event', async () => {
+      const box = await Box.new();
+      await box.initialize(owner);
+
+      await box.store(12345, {from: owner});
+
+      const receipt = await box.increment({from: owner});
+
+      const bigValue = new BN('12346');
       expectEvent(receipt, 'ValueChanged', {newValue: bigValue});
     });
   });

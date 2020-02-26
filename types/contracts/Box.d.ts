@@ -21,6 +21,8 @@ export class Box extends Contract {
   );
   clone(): Box;
   methods: {
+    increment(): TransactionObject<void>;
+
     initialize(sender: string): TransactionObject<void>;
 
     isOwner(): TransactionObject<boolean>;
