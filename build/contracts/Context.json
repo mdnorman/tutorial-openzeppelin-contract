@@ -127,7 +127,7 @@
                       "name": "msg",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 285,
+                      "referencedDeclaration": 296,
                       "src": "946:3:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_magic_message",
@@ -221,7 +221,7 @@
                     "name": "this",
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
-                    "referencedDeclaration": 301,
+                    "referencedDeclaration": 312,
                     "src": "1036:4:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_contract$_Context_$29",
@@ -241,7 +241,7 @@
                       "name": "msg",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 285,
+                      "referencedDeclaration": 296,
                       "src": "1176:3:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_magic_message",
@@ -332,7 +332,7 @@
   "deployedBytecode": "0x",
   "compiler": {
     "name": "solc",
-    "version": "0.5.12+commit.7709ece9.Emscripten.clang",
+    "version": "0.5.16+commit.9c3226ce.Emscripten.clang",
     "optimizer": {
       "enabled": true,
       "runs": 200

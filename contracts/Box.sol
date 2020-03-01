@@ -10,6 +10,10 @@ contract Box is Ownable {
 
   event ValueChanged(uint256 newValue);
 
+  function initialize() public initializer {
+    initialize(msg.sender);
+  }
+
   // The onlyOwner modifier restricts who can call the store function
   function store(uint256 newValue) public onlyOwner {
     value = newValue;

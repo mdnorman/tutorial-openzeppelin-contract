@@ -249,10 +249,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        288,
-                        289
+                        299,
+                        300
                       ],
-                      "referencedDeclaration": 289,
+                      "referencedDeclaration": 300,
                       "src": "1016:7:2",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
@@ -616,7 +616,7 @@
                         "name": "this",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 299,
+                        "referencedDeclaration": 310,
                         "src": "1820:4:2",
                         "typeDescriptions": {
                           "typeIdentifier": "t_contract$_Initializable_$222",
@@ -894,11 +894,11 @@
     ],
     "src": "0:2015:2"
   },
-  "bytecode": "0x6080604052348015600f57600080fd5b50603e80601d6000396000f3fe6080604052600080fdfea265627a7a723158203b1172bdbf325e4739ac312f8aaae589441809fd5e3cccbe0b556ae120c450ef64736f6c634300050c0032",
-  "deployedBytecode": "0x6080604052600080fdfea265627a7a723158203b1172bdbf325e4739ac312f8aaae589441809fd5e3cccbe0b556ae120c450ef64736f6c634300050c0032",
+  "bytecode": "0x6080604052348015600f57600080fd5b50603e80601d6000396000f3fe6080604052600080fdfea265627a7a72315820dbfb7bf66cde242c1899bcdb50873b309becc69f4a570d94c05117163512e90464736f6c63430005100032",
+  "deployedBytecode": "0x6080604052600080fdfea265627a7a72315820dbfb7bf66cde242c1899bcdb50873b309becc69f4a570d94c05117163512e90464736f6c63430005100032",
   "compiler": {
     "name": "solc",
-    "version": "0.5.12+commit.7709ece9.Emscripten.clang",
+    "version": "0.5.16+commit.9c3226ce.Emscripten.clang",
     "optimizer": {
       "enabled": true,
       "runs": 200
