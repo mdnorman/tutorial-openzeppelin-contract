@@ -6,7 +6,7 @@
   "dependencies": {
     "@openzeppelin/contracts-ethereum-package": "^2.4.0"
   },
-  "name": "OpenZeppelin-contract-tutorial",
+  "name": "tutorial-openzeppelin-contract",
   "version": "0.0.0",
   "compiler": {
     "compilerSettings": {

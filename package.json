@@ -1,6 +1,6 @@
 {
   "author": "Michael D. Norman",
-  "name": "tutorial-OpenZeppelin-contract",
+  "name": "tutorial-openzeppelin-contract",
   "description": "",
   "private": true,
   "license": "commercial",
@@ -16,6 +16,7 @@
   "scripts": {
     "clean": "rm -rf dist && rm -rf out",
     "build": "tsc",
+    "build:watch": "tsc --watch",
     "rebuild": "npm run clean && npm run build",
     "test": "jest",
     "posttest": "npm run lint",

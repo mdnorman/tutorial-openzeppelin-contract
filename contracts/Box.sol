@@ -1,4 +1,5 @@
 pragma solidity ^0.5.0;
+pragma experimental ABIEncoderV2;
 
 // Import Ownable from the OpenZeppelin Contracts library
 import '@openzeppelin/contracts-ethereum-package/contracts/ownership/Ownable.sol';
@@ -6,21 +7,36 @@ import '@openzeppelin/contracts-ethereum-package/contracts/ownership/Ownable.sol
 
 // Make Box inherit from the Ownable contract
 contract Box is Ownable {
-  uint256 private value;
+  struct BoxInfo {
+    string name;
+  }
+
+  uint256 private _value;
+  BoxInfo private _info;
 
   event ValueChanged(uint256 newValue);
 
+  function initializeBox(BoxInfo memory info) public initializer {
+    _info = info;
+
+    Ownable.initialize(_msgSender());
+  }
+
+  function name() public view returns (string memory) {
+    return _info.name;
+  }
+
   // The onlyOwner modifier restricts who can call the store function
   function store(uint256 newValue) public onlyOwner {
-    value = newValue;
+    _value = newValue;
     emit ValueChanged(newValue);
   }
 
   function increment() public onlyOwner {
-    store(value + 1);
+    store(_value + 1);
   }
 
   function retrieve() public view returns (uint256) {
-    return value;
+    return _value;
   }
 }
