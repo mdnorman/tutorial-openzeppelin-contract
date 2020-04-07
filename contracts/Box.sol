@@ -16,10 +16,10 @@ contract Box is Ownable {
 
   event ValueChanged(uint256 newValue);
 
-  function initializeBox(BoxInfo memory info) public initializer {
+  function initializeBox(BoxInfo memory info, address owner) public initializer {
     _info = info;
 
-    Ownable.initialize(_msgSender());
+    Ownable.initialize(owner);
   }
 
   function name() public view returns (string memory) {

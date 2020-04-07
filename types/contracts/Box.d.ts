@@ -25,7 +25,7 @@ export class Box extends Contract {
 
     initialize(sender: string): TransactionObject<void>;
 
-    initializeBox(info: {name: string}): TransactionObject<void>;
+    initializeBox(info: {name: string}, owner: string): TransactionObject<void>;
 
     isOwner(): TransactionObject<boolean>;
 
