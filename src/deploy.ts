@@ -1,7 +1,6 @@
-import { setupLoader } from '@openzeppelin/contract-loader/lib';
-import { Box } from '../types/contracts/Box';
-
-const {ZWeb3, Contracts, SimpleProject} = require('@openzeppelin/upgrades');
+import {ZWeb3, Contracts, SimpleProject} from '@openzeppelin/upgrades/lib';
+import {setupLoader} from '@openzeppelin/contract-loader/lib';
+import {Box} from '../types/contracts/Box';
 
 async function main() {
   // Initialize a web3 provider
@@ -14,7 +13,7 @@ async function main() {
   console.log(`Proxy Admin Account: ${proxyAdminAccount}`);
 
   // Instantiate a project
-  const myProject = new SimpleProject('tutorial-openzeppelin-contract', {from: proxyAdminAccount});
+  const myProject = new SimpleProject('tutorial-openzeppelin-contract', undefined, {from: proxyAdminAccount});
 
   const accounts = await ZWeb3.web3.eth.getAccounts();
   const ownerAccount = accounts[1];
@@ -24,7 +23,11 @@ async function main() {
   const boxInfo = {name: 'My Box'};
 
   // This initialize call fails
-  // const boxProxy = await myProject.createProxy(boxContract, {initMethod: 'initializeBox', initArgs: [boxInfo, ownerAccount]});
+  // const boxProxy = await myProject.createProxy(boxContract, {
+  //   initMethod: 'initializeBox',
+  //   // @ts-ignore
+  //   initArgs: [boxInfo, ownerAccount],
+  // });
 
   // This initialize call succeeds
   // const boxProxy = await myProject.createProxy(boxContract, {initMethod: 'initialize', initArgs: [ownerAccount]});
