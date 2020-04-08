@@ -1,5 +1,6 @@
 {
   "manifestVersion": "2.2",
+<<<<<<< HEAD
   "contracts": {
     "Box": "Box"
   },
@@ -7,6 +8,13 @@
     "@openzeppelin/contracts-ethereum-package": "^2.4.0"
   },
   "name": "tutorial-openzeppelin-contract",
+=======
+  "contracts": {},
+  "dependencies": {
+    "@openzeppelin/contracts-ethereum-package": "^2.4.0"
+  },
+  "name": "CHANGEME",
+>>>>>>> node-solidity-openzeppelin-sapling/master
   "version": "0.0.0",
   "compiler": {
     "compilerSettings": {
