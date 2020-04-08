@@ -19,6 +19,7 @@ contract Box is Ownable {
   function initializeBox(BoxInfo memory info, address owner) public initializer {
     _info = info;
 
+    // solhint-disable-next-line mark-callable-contracts
     Ownable.initialize(owner);
   }
 
