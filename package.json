@@ -47,7 +47,7 @@
     "@types/jest": "25.2.3",
     "@types/node": "13.7.4",
     "ganache-cli": "6.12.2",
-    "husky": "4.3.8",
+    "husky": "6.0.0",
     "jest": "26.0.0",
     "jest-config": "25.3.0",
     "mnemonics": "1.1.3",
