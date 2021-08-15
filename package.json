@@ -35,7 +35,7 @@
     "@openzeppelin/contract-loader": "0.6.2",
     "@openzeppelin/contracts-ethereum-package": "2.5.0",
     "@openzeppelin/upgrades": "2.8.0",
-    "web3": "1.3.6",
+    "web3": "1.5.2",
     "web3-core": "1.3.6"
   },
   "devDependencies": {
